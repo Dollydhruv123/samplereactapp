@@ -16,5 +16,8 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - run: curl -L https://api.nife.io/release/install.sh | sh
-      - run: nifectl auth login --email dolly@nife.io  --password Dolly@Dhruv1234
+      - run: |
+          curl -L https://api.nife.io/release/install.sh | sh
+          nifectl auth login --email dolly@nife.io  --password Dolly@Dhruv1234
+          nifectl init
+          
