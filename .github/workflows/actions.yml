@@ -18,6 +18,8 @@ jobs:
       - run: npm test
       - run: |
           curl -L https://api.nife.io/release/install.sh | sh
+          nifectl -v
+          export $HOME/install
           nifectl auth login --email dolly@nife.io  --password Dolly@Dhruv1234
           nifectl init
           
